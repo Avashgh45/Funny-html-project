@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body style="margin:0; background:white;">
+
+<h2 style="
+    text-align:center;
+    font-size:32px;
+    font-weight:900;
+    margin-top:35px;
+    margin-bottom:20px;
+">
+    فیلم نایاب ممد در حال رقصیدن
+</h2>
+
+<video
+    id="video"
+    style="width:100vw; height:75vh; object-fit:contain;"
+>
+    <source src="/kodak.mp4" type="video/mp4">
+</video>
+
+<div style="
+    text-align:center;
+    margin-top:10px;
+">
+    <button
+        id="playButton"
+        style="
+            font-size:24px;
+            padding:10px 28px;
+            border-radius:12px;
+            border:2px solid #333;
+            cursor:pointer;
+            font-weight:bold;
+        "
+    >
+        ▶ Play
+    </button>
+</div>
+
+<script>
+const video = document.getElementById("video");
+const button = document.getElementById("playButton");
+
+button.onclick = () => {
+    if (video.paused) {
+        video.play();
+        button.textContent = "⏸ Pause";
+    } else {
+        video.pause();
+        button.textContent = "▶ Play";
+    }
+};
+</script>
+
+</body>
+</html>
