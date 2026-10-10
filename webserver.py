@@ -1,1 +1,4 @@
-python -m http.server 80 --bind 0.0.0.0
+import subprocess
+subprocess.run([
+	"python", "-m", "http.server", "80", "--bind", "0.0.0.0"
+])
